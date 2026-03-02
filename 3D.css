@@ -396,3 +396,12 @@ line-height: 1;
     transform: rotateX(0deg);
     transition: transform 1s ease;  /* Slow down the whole book flip */
 }
+
+/* Fix initial page order */
+#turn-1 {
+    z-index: 2;
+}
+
+#turn-2 {
+    z-index: 1;
+}
