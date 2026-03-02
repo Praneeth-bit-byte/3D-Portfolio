@@ -1,3 +1,21 @@
+window.onload = () => {
+
+    const pages = document.querySelectorAll('.book-page.page-right');
+    const coverRight = document.querySelector('.cover.cover-right');
+
+    // Reset all pages
+    pages.forEach((page, index) => {
+        page.classList.remove('turn');
+        page.style.zIndex = 20 - index;
+    });
+
+    // Reset cover
+    if (coverRight) {
+        coverRight.classList.remove('turn');
+    }
+
+    window.scrollTo(0, 0);
+};
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
 pageTurnBtn.forEach((el, index) => {
     el.onclick = () => {
@@ -62,3 +80,4 @@ backProfileBtn.onclick = () => {
         }, (index + 1) * 200 + 100);
     });
 };
+
